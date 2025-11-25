@@ -14,6 +14,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- GLightbox for image gallery -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 </head>
 
 <body>
@@ -208,46 +212,127 @@
     <!-- Projetos Section -->
     <section id="projetos" class="projects section bg-light">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Projetos</h2>
                 <p class="section-subtitle">Transformações que inspiram</p>
             </div>
+
+            <!-- Filter Buttons -->
+            <div class="project-filters" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="sala">Salas</button>
+                <button class="filter-btn" data-filter="cozinha">Cozinhas</button>
+                <button class="filter-btn" data-filter="quarto">Quartos</button>
+                <button class="filter-btn" data-filter="banheiro">Banheiros</button>
+            </div>
+
             <div class="projects__grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">Sala de Estar</div>
-                        <div class="project-overlay">
-                            <h3>Sala de Estar Moderna</h3>
-                            <p>Transformação completa com integração e funcionalidade</p>
+                <!-- Projeto 1 - Sala Moderna -->
+                <div class="project-card" data-category="sala" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200" class="glightbox"
+                        data-gallery="gallery1">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=400&fit=crop"
+                                alt="Sala de Estar Moderna" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Sala de Estar Moderna</h3>
+                                    <p>Integração perfeita com tons neutros e toques dourados</p>
+                                    <span class="project-btn">Ver Detalhes</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">Cozinha</div>
-                        <div class="project-overlay">
-                            <h3>Cozinha Gourmet</h3>
-                            <p>Espaço perfeito para receber e conviver</p>
+
+                <!-- Projeto 2 - Cozinha Gourmet -->
+                <div class="project-card" data-category="cozinha" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?w=1200" class="glightbox"
+                        data-gallery="gallery1">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?w=600&h=400&fit=crop"
+                                alt="Cozinha Gourmet" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Cozinha Gourmet</h3>
+                                    <p>Design funcional com ilha central e acabamento premium</p>
+                                    <span class="project-btn">Ver Detalhes</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">Quarto</div>
-                        <div class="project-overlay">
-                            <h3>Suíte Master</h3>
-                            <p>Refúgio de conforto e sofisticação</p>
+
+                <!-- Projeto 3 - Suíte Master -->
+                <div class="project-card" data-category="quarto" data-aos="zoom-in" data-aos-delay="300">
+                    <a href="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1200" class="glightbox"
+                        data-gallery="gallery1">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&h=400&fit=crop"
+                                alt="Suíte Master" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Suíte Master</h3>
+                                    <p>Refúgio de tranquilidade com palette suave</p>
+                                    <span class="project-btn">Ver Detalhes</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">Home Office</div>
-                        <div class="project-overlay">
-                            <h3>Home Office</h3>
-                            <p>Produtividade com estilo e inspiração</p>
+
+                <!-- Projeto 4 - Banheiro Spa -->
+                <div class="project-card" data-category="banheiro" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200" class="glightbox"
+                        data-gallery="gallery1">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&h=400&fit=crop"
+                                alt="Banheiro Spa" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Banheiro Spa</h3>
+                                    <p>Luxo e conforto com mármore e metais nobres</p>
+                                    <span class="project-btn">Ver Detalhes</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+                </div>
+
+                <!-- Projeto 5 - Sala Jantar -->
+                <div class="project-card" data-category="sala" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200" class="glightbox"
+                        data-gallery="gallery1">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=400&fit=crop"
+                                alt="Sala de Jantar" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Sala de Jantar Elegante</h3>
+                                    <p>Espaço sofisticado para momentos especiais</p>
+                                    <span class="project-btn">Ver Detalhes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Projeto 6 - Home Office -->
+                <div class="project-card" data-category="sala" data-aos="zoom-in" data-aos-delay="300">
+                    <a href="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=1200" class="glightbox"
+                        data-gallery="gallery1">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600&h=400&fit=crop"
+                                alt="Home Office" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Home Office Inspirador</h3>
+                                    <p>Produtividade com estilo e organização</p>
+                                    <span class="project-btn">Ver Detalhes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -327,7 +412,7 @@
                         <span class="icon">📱</span>
                         <div>
                             <strong>WhatsApp</strong>
-                            <p>(16) 99999-9999</p>
+                            <p>(16) 98206-1248</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -420,6 +505,27 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5516982061248?text=Olá!%20Gostaria%20de%20conhecer%20mais%20sobre%20seus%20projetos%20de%20design%20de%20interiores."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" data-aos="zoom-in" data-aos-delay="1000">
+        <svg viewBox="0 0 32 32" fill="currentColor">
+            <path
+                d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.923 0-7.435 6.050-13.485 13.485-13.485s13.485 6.050 13.485 13.485c0 7.435-6.050 13.485-13.485 13.485zM21.305 18.694c-0.372-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.186-0.837 0.186s-0.961 1.208-1.179 1.456c-0.217 0.248-0.434 0.279-0.806 0.093s-1.571-0.579-2.991-1.845c-1.107-0.986-1.854-2.204-2.071-2.576s-0.023-0.573 0.163-0.758c0.167-0.167 0.372-0.434 0.558-0.651s0.248-0.372 0.372-0.620c0.124-0.248 0.062-0.465-0.031-0.651s-0.837-2.010-1.147-2.752c-0.303-0.722-0.611-0.624-0.837-0.636-0.217-0.011-0.465-0.013-0.713-0.013s-0.651 0.093-0.992 0.465c-0.341 0.372-1.301 1.270-1.301 3.096s1.332 3.591 1.518 3.839c0.186 0.248 2.634 4.023 6.382 5.641 0.892 0.385 1.589 0.615 2.132 0.787 0.896 0.284 1.711 0.244 2.355 0.148 0.719-0.108 2.197-0.898 2.507-1.766s0.31-1.611 0.217-1.766c-0.093-0.155-0.341-0.248-0.713-0.434z" />
+        </svg>
+        <span class="whatsapp-text">Fale Comigo</span>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- GLightbox -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
